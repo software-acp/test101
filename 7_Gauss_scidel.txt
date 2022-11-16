@@ -1,0 +1,13 @@
+clc;
+X0=0,Y0=0,Z0=0;
+deff('x=f1(y,z)','x=(32-4*y+z)/28');
+deff('y=f2(x,z)','y=(35-2*x-4*z)/17');
+deff('z=f3(x,y)','z=(24-x-3*y)/10');
+
+for i=1:8
+    X0=f1(Y0,Z0)
+    Y0=f2(X0,Z0)
+    Z0=f3(X0,Y0)
+    printf("\t x(%i)=%g \t y(%i)=%g \t z(%i)=%g \n",i,X0,i,Y0,i,Z0);
+end
+printf("the solution converges to %g,%g,%g",X0,Y0,Z0);

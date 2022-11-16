@@ -1,0 +1,21 @@
+clc;
+n=input("enter the number of data:")
+labels=["x";"y"]
+[OK,x,y]=getvalue("enter data values",labels,list("row",n,"row",n));
+Sx=gsort(x)
+Sy=gsort(y)
+for i=1:n
+    for j=1:n
+        if x(i)==Sx(j) then 
+            Rx(i)=j
+        end
+    end
+    for j=1:n
+        if y(i)==Sy(j) then 
+            Ry(i)=j
+        end
+    end
+end
+d=Rx-Ry
+R=1-((6*sum(d^2))/((n^3)-n))
+disp("spearman rank correlation coefficient is:",R);

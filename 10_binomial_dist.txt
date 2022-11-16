@@ -1,0 +1,12 @@
+clc()
+function f=bion(x,q,n,p)
+    fact1=[factorial(n)]*[factorial(n-x)*factorial(x)]
+    fact2=(p^x)*(q^(n-x))
+    f=fact1*fact2
+endfunction
+n=10
+x=6
+p=0.8
+q=1-p
+f=bion(x,q,n,p)
+disp(f)

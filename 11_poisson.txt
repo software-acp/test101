@@ -1,0 +1,14 @@
+function f=poisson(lamda,x)
+    n=exp(-lamda)*(lamda^x)
+    d=factorial(x);
+    f=n/d;
+endfunction
+p=0
+lamda=input("enter lamda :");
+x=input("enter x :")
+for x=0:x
+    f=poisson(lamda,x)
+    disp(f)
+    p=p+f
+end
+disp("sum is :",p);

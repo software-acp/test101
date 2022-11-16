@@ -1,0 +1,13 @@
+clf;
+clc;
+deff('x=f(x)','x=x^3-x^2-15*x+1');
+deff('x=f1(x)','x=3*x^2-2*x-15');
+printf("\n\t Xn \t\t f(Xn) \t\t f1(Xn) \t\t Xn+1");
+
+X0=1;
+for i=1:5
+    X1=X0-f(X0)/f1(X0);
+    printf("\n %i\t %10f\t %10f\t %10f\t %10f",i-1,X0,f(X0),f1(X0),X1);
+    X0=X1;
+end
+printf("\n\n therefore this is convergent");

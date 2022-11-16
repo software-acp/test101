@@ -1,0 +1,5 @@
+x=[4 7; 2 6];
+y=det(x);
+disp("determinant is:",y);
+z=inv(x);
+disp("inverse is:",z);

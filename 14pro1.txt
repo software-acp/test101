@@ -1,0 +1,21 @@
+clc;
+x=[1,2,3,4,5];
+y=[2,5,3,8,7];
+n=5
+sumX=0
+sumY=0
+sum2=0
+sumXY=0
+printf("\t x \t y \t x^2 \t xy \n\n")
+for i=1:n
+    printf("\t %i \t %i \t %i \t %i\n",x(i),y(i),x(i)^2,x(i)*y(i));
+	sumX=sumX + x(i)
+    sumY=sumY + y(i)
+    sum2=sum2 + x(i)^2
+    sumXY=sumXY + x(i)*y(i)
+end
+
+printf("\t %i \t %i \t %i \t %i \n",sumX,sumY,sum2,sumXY);
+b=((sum2*sumY-sumX*sumXY)/(n*sum2-sumX*sumX));
+a=((n*sumXY-sumX*sumY)/(n*sum2-sumX*sumX));
+printf("\n\n the line in y=%f+%f.x",a,b);

@@ -1,0 +1,12 @@
+clc;
+n=input("enter the number of data elements:")
+labels=["O";"E"]
+[OK,O,E]=getvalue("enter data values",labels,list("row",n,"row",n));
+x=sum(((O-E).^2)/E)
+disp("the calculated value is",x)
+Cs=input("enter chisquare value")
+if x<Cs then
+disp("hypothesis is accepted")
+else
+disp("hypothesis is not accepted")
+end

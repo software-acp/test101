@@ -1,0 +1,15 @@
+clc;
+n=input("enter the number of data:")
+labels=["A"]
+[OK,A]=getvalue("enter data values:",labels,list("row",n));
+x=mean(A)
+pmean=input("enter values of pmean")
+dev=stdev(A)
+t=((x-pmean)/(dev/sqrt(n)))
+disp(t,"the calculated value is")
+value=input("enter a t value")
+if t<value then
+disp("hypothesis is accepted")
+else
+disp("hypothesis is not accepted")
+end

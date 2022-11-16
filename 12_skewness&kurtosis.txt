@@ -1,0 +1,21 @@
+clc;
+n=5
+x=[2,3,4,5,6]
+xbar=mean(x)
+s=stdev(x)
+m=(x-xbar)^3;
+sk=sum(m)/[(n-1)*s^3]
+    disp("the measure of skewness is :",sk)
+m=(x-xbar)^4;
+kr=sum(m)/[(n-1)*s^4]
+    disp("the measure of kurtosis is :",kr)
+ekr=(kr-3)
+disp("excess kurtosis is :",ekr)
+if ekr==0 then
+    disp("this is meso kurtosis distribution");
+else if(ekr<0) then
+        disp("this is plato kurtosis distribution");
+else
+    dsip("this is lepto kurtosis distribution");
+end
+end

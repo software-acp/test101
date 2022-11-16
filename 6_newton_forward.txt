@@ -1,0 +1,16 @@
+clc;
+n=input("enter the no. of data elements:");
+labels=["x";"y"]
+[OK,x,y]=getvalue("enter data values",labels,list("row",n,"row",n))
+X1=input("enter the value of x whose corresponding y value we want:")
+X0=input("enter the initial value of x:")
+h=input("enter the interval:")
+p=(X1-X0)/h
+disp("the value of p is:",p)
+Y0=input("enter the initial value of y:")
+    Dy=diff(y)
+    D2y=diff(Dy)
+    D3y=diff(D2y)
+    
+y=Y0+p*Dy+((p*(p-1)*D2y(1)/factorial(2))+((p*(p-1)*(p-2)*D3y(1)/factorial(3));
+disp("the corresponding y value where x=52 is :",y);

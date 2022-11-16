@@ -1,0 +1,6 @@
+clc;
+A=[1 -2; -5 4];
+e=spec(A);
+[c,d]=spec(A);
+disp("Eigen values :",e)
+disp("Eigen vectors :",c)
